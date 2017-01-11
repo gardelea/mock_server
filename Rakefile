@@ -1,7 +1,7 @@
 require 'active_record'
 require 'yaml'
 require 'logger'
-require 'cucumber/rake/task'
+# require 'cucumber/rake/task'
 require 'sqlite3'
 
 if ENV.has_key? 'ENVIRONMENT'
