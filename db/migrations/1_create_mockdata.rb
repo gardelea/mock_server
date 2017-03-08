@@ -2,6 +2,9 @@ class CreateMockdata < ActiveRecord::Migration
 
   def self.up
 
+    sqlite_version = select_all('select sqlite_version() AS sqlite_version;')
+    puts "sqlite_version = #{sqlite_version.inspect}"
+
     create_table :mockdata do |t|
       t.string :mock_name
       t.string :mock_http_status
